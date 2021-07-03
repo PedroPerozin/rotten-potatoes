@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: movies
 spec:
-  replicas: 10
   selector:
     matchLabels:
       app: movies
@@ -14,7 +13,7 @@ spec:
     spec:
       containers:
         - name: movies
-          image: pedroperozin/rotten-potatoes:v2
+          image: pedroperozin/rotten-potatoes
           ports:
             - containerPort: 5000
           env:
